@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 1364276967271730804}
   - component: {fileID: 340893686011324574}
   - component: {fileID: 6167915317972773856}
+  - component: {fileID: 7149432877095845818}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -243,34 +244,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfb92893b16712f409db57b670b21e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  action: {fileID: 0}
-  move:
-    m_Name: Move
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: a4aaf868-f817-4b18-9b83-0df10ae7c596
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  light:
-    m_Name: Light
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 1c24e427-0cfb-4856-9b5f-851ec2f63f6a
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  interact:
-    m_Name: Interact
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 45b52a94-753a-4ea5-936c-81c7ba387b49
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  cam: {fileID: 0}
   rigidbody: {fileID: 1364276967271730804}
   WalkSpeed: 5
+  light: {fileID: 0}
+  sanity: {fileID: 0}
+--- !u!65 &7149432877095845818
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2884159610217545477}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
