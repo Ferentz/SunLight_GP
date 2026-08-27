@@ -18,23 +18,15 @@ public class Convo
 	public List<Sentence> convo = new List<Sentence>();
 }
 
-public class NPC : MonoBehaviour , Interactable
+public class NPC : Interactable
 {
     //public string conversations;
 	public List<Convo> conversations = new List<Convo>();
 	private int convIDX, sentIDX;
 	public TMP_Text text;
-
-    public Sprite inRangeSprite;
-	public Sprite outRangeSprite;
-	public SpriteRenderer renderer;
 	const float coolDownTime = 1;
 	float timer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-		renderer.sprite = outRangeSprite;
-	}
 
     // Update is called once per frame
     void Update()
@@ -46,34 +38,8 @@ public class NPC : MonoBehaviour , Interactable
 
     }
 
-	void OnTriggerEnter(Collider collision)
-	{
-		Debug.Log("entered!");
-        renderer.sprite = inRangeSprite;
 
-		var player = collision.gameObject.GetComponent<Player>();
-		if (player != null)
-		{
-			player.interactable = this;
-		}
-	}
-
-	void OnTriggerExit(Collider collision)
-	{
-		Debug.Log("left!");
-		renderer.sprite = outRangeSprite;
-		var player = collision.gameObject.GetComponent<Player>();
-		if (player != null)
-		{
-			if(player.interactable == this)
-			{
-				player.interactable = null;
-			}
-		}
-	}
-
-
-	public void Interact()
+	public override void Interact()
 	{
 		if (timer > 0) return;
 		timer += coolDownTime;
