@@ -17,11 +17,11 @@ public abstract class Interactable : MonoBehaviour
 	void OnTriggerEnter(Collider collision)
 	{
 		Debug.Log("entered!");
-		renderer.sprite = inRangeSprite;
 
 		var player = collision.gameObject.GetComponent<Player>();
 		if (player != null)
 		{
+			renderer.sprite = inRangeSprite;
 			player.interactable = this;
 		}
 	}

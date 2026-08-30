@@ -53,6 +53,10 @@ public class Player : MonoBehaviour
 	public void OnInteract(InputAction.CallbackContext ctx)
 	{
 		doInteract = ctx.ReadValue<float>();
-		interactable.Interact();
+		if(interactable != null)
+		{
+
+			interactable.Interact();
+		}
 	}
 }
