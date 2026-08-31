@@ -5,10 +5,31 @@ public class Teleport_Zones : MonoBehaviour
     [SerializeField] private Transform teleportLocation;
     [SerializeField] private Camera targetCamera;
 
+    [Header("Teleport Cooldown")]
+    [SerializeField] private float cooldown = 3f;
+    private bool isOnCooldown = false;
+
+    private float cooldownTimer = 0f;
+
+    private void Update()
+    {
+        // Count down the cooldown
+        if (cooldownTimer > 0f)
+        {
+            cooldownTimer -= Time.deltaTime;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            if (cooldownTimer > 0f)
+                return;
+
+            // Start cooldown
+            cooldownTimer = cooldown;
+
             // Teleport player
             Rigidbody playerRb = other.GetComponent<Rigidbody>();
 
