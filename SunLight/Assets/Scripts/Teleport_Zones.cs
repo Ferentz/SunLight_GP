@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TeleportTrigger : MonoBehaviour
+public class Teleport_Zones : MonoBehaviour 
 {
     [SerializeField] private Transform teleportLocation;
     [SerializeField] private Camera targetCamera;
