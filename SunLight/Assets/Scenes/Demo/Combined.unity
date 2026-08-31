@@ -2798,9 +2798,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2884159610217545477, guid: a4d4e8ee811d12e47a9366f1fdb8f8d5, type: 3}
       insertIndex: 4
       addedObject: {fileID: 1257309447}
-    - targetCorrespondingSourceObject: {fileID: 2884159610217545477, guid: a4d4e8ee811d12e47a9366f1fdb8f8d5, type: 3}
-      insertIndex: 5
-      addedObject: {fileID: 1257309454}
   m_SourcePrefab: {fileID: 100100000, guid: a4d4e8ee811d12e47a9366f1fdb8f8d5, type: 3}
 --- !u!1 &1257309444 stripped
 GameObject:
@@ -2850,22 +2847,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfb92893b16712f409db57b670b21e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
---- !u!114 &1257309454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1257309444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7ceb59cfcc2c24449ce7942b9993750, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Inventory
-  _items:
-    dict:
-    - sprite: {fileID: 2098505327}
-      ID: 0
 --- !u!1 &1305797496
 GameObject:
   m_ObjectHideFlags: 0
@@ -2883,7 +2864,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1305797497
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2923,7 +2904,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1263180b1bd3b3746bc7731abb61b752, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ce6e643acb290b1489bad30e1b08ffc4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3028,8 +3009,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.02
-  m_fontSizeBase: 19.02
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3067,7 +3048,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -123.47919, y: -3.7627563, z: -121.05206, w: -12.502869}
+  m_margin: {x: -733.4092, y: -41.006516, z: -121.05206, w: -40.650696}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5740,10 +5721,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cbaf0cddcaa02a47a1d138076e76b14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
-  inRangeSprite: {fileID: 21300000, guid: ce6e643acb290b1489bad30e1b08ffc4, type: 3}
-  outRangeSprite: {fileID: 21300000, guid: 6a19c1336d6a9ea45b25257f42163575, type: 3}
+  inRangeSprite: {fileID: 21300000, guid: 4dc0549747113cb46adf9c2d32ac2a5b, type: 3}
+  outRangeSprite: {fileID: 21300000, guid: ce6e643acb290b1489bad30e1b08ffc4, type: 3}
   renderer: {fileID: 2098505329}
-  ID: 0
+  ID: 2
 --- !u!65 &2098505331
 BoxCollider:
   m_ObjectHideFlags: 0
