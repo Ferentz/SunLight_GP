@@ -1544,6 +1544,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604756086}
   m_CullTransparentMesh: 1
+--- !u!212 &610546763 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2631250872260020103, guid: 83a49832e59547249ad98d0a79ebee88, type: 3}
+  m_PrefabInstance: {fileID: 2092230817}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &638999683
 GameObject:
   m_ObjectHideFlags: 0
@@ -2791,6 +2796,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6167915317972773856, guid: a4d4e8ee811d12e47a9366f1fdb8f8d5, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1257309446}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5456,6 +5465,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2114961225}
     m_Modifications:
     - target: {fileID: -6263845682967694228, guid: 83a49832e59547249ad98d0a79ebee88, type: 3}
+      propertyPath: rend
+      value: 
+      objectReference: {fileID: 610546763}
+    - target: {fileID: -6263845682967694228, guid: 83a49832e59547249ad98d0a79ebee88, type: 3}
       propertyPath: text
       value: 
       objectReference: {fileID: 1314335656}
@@ -5723,7 +5736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
   inRangeSprite: {fileID: 21300000, guid: 4dc0549747113cb46adf9c2d32ac2a5b, type: 3}
   outRangeSprite: {fileID: 21300000, guid: ce6e643acb290b1489bad30e1b08ffc4, type: 3}
-  renderer: {fileID: 2098505329}
+  rend: {fileID: 2098505329}
   ID: 2
 --- !u!65 &2098505331
 BoxCollider:

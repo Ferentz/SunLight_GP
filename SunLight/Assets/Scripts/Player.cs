@@ -7,11 +7,11 @@ public class Player : MonoBehaviour
     private Vector2 moveAmt;
     private bool useLight;
     private float doInteract;
-	[SerializeField] public Rigidbody rigidbody;
+	[SerializeField] public Rigidbody rb;
 
     public float WalkSpeed = 5;
 
-	public uiBar light;
+	public uiBar _light;
 	public uiBar sanity;
 
 	public Interactable interactable;
@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rigidbody.MovePosition(rigidbody.position + new Vector3(moveAmt.x, 0, moveAmt.y) * WalkSpeed * Time.deltaTime);
+        rb.MovePosition(rb.position + new Vector3(moveAmt.x, 0, moveAmt.y) * WalkSpeed * Time.deltaTime);
 
 	}
 
@@ -40,12 +40,12 @@ public class Player : MonoBehaviour
 		if (val > 0)
 		{
 			useLight = true;
-			light.state = uiBar.barState.drain;
+            _light.state = uiBar.barState.drain;
 			sanity.state = uiBar.barState.gain;
 		}
 		else
 		{
-			light.state = uiBar.barState.station;
+            _light.state = uiBar.barState.station;
 			sanity.state = uiBar.barState.drain;
 		}
 	}

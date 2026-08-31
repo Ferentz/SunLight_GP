@@ -6,11 +6,11 @@ public abstract class Interactable : MonoBehaviour
 	public Sprite inRangeSprite;
 	public Sprite outRangeSprite;
 
-	public SpriteRenderer renderer;
+	public SpriteRenderer rend;
 
 	private void Start()
 	{
-		renderer.sprite = outRangeSprite;
+        rend.sprite = outRangeSprite;
 	}
 	public abstract void Interact();
 
@@ -21,7 +21,7 @@ public abstract class Interactable : MonoBehaviour
 		var player = collision.gameObject.GetComponent<Player>();
 		if (player != null)
 		{
-			renderer.sprite = inRangeSprite;
+            rend.sprite = inRangeSprite;
 			player.interactable = this;
 		}
 	}
@@ -29,7 +29,7 @@ public abstract class Interactable : MonoBehaviour
 	void OnTriggerExit(Collider collision)
 	{
 		Debug.Log("left!");
-		renderer.sprite = outRangeSprite;
+        rend.sprite = outRangeSprite;
 		var player = collision.gameObject.GetComponent<Player>();
 		if (player != null)
 		{
